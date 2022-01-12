@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="final.css">
+</head>
+<body>
+    <div class="tracker">
+        <h1>BUDGET TRACKER</h1>
+
+        <div class="budgetDiv">
+            <h2>BALANCE:</h2>
+            <div id="acctBalance">₱000</div>
+        </div>
+
+        <div class="account">
+            <div class="incomeDiv">
+                <h2>INCOME</h2>
+                <div id="acctIncome">₱000</div>
+            </div>
+            <div class="expensesDiv">
+                <h2>Expenses</h2>
+                <div id="acctExpenses">₱000</div>
+            </div>
+        </div>
+        <h2>DASHBOARD:</h2>
+    <div class="inExContainer">
+        <div class="incomeContainer">
+            <h3>Income</h3>
+            <ul id="incomeList">
+                <li>
+                    Commission
+                    <div>
+                        <span class="incomeValue">₱000</span>
+                        <button>Delete</button>
+                    </div>
+                </li>
+                <li>
+                    Salary
+                    <div>
+                        <span class="incomeBalue">₱000</span>
+                        <button>Delete</button>
+                    </div> 
+                </li>
+            </ul>
+        </div>
+        <div class="expensesContainer">
+            <h3>Expenses</h3>
+            <ul id="expensesList">
+                <li>
+                    Buy grocery 
+                    <div>
+                        <span class="expenseValue">₱000</span>
+                        <button>Delete</button>
+                    </div>
+                </li>
+                <li>
+                    Buy school supplies
+                    <div>
+                        <span class="expenseValue">₱000</span>
+                        <button>Delete</button>
+                    </div> 
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+        <div class="addInput">
+            <h2>Add transaction</h2>
+            <form>
+                <label for="type">type:</label> <input id="inputType" type="text">
+                <label for="amount">amount:</label> <input id="inputValue" type="text"><br>
+                <button id="inButton">Input Income</button><br>
+                <button id="expButton">Input Expense</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

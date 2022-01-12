@@ -1,0 +1,134 @@
+:root {
+    --box-shadow: 0px 1px 4px 1px rgba(199,199,199,1);
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tracker h1 {
+    text-align: center;
+}
+
+h2 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.budgetDiv #acctBalance {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.account {
+    display: flex;
+    box-shadow: var(--box-shadow);
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.incomeDiv {
+    border-right: 1px solid black;
+    padding-right: 20px;
+}
+
+.incomeDiv h2{
+    color: green;
+}
+
+.expensesDiv{
+    padding-left: 20px;
+}
+
+.expensesDiv h2{
+    color: red;
+}
+
+ #acctIncome, #acctExpenses {
+     font-size: 1.3em;
+ }
+
+ .inExContainer {
+    display: flex;
+    box-shadow: var(--box-shadow);
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin-top: 20px;
+ }
+
+ .incomeContainer {
+    border-right: 1px solid black;
+    padding-right: 20px;
+ }
+
+ .incomeContainer h3 {
+     padding-left: 50px;
+     color: green;
+ }
+
+.expensesContainer {
+    padding-left: 20px;
+}
+
+.expensesContainer h3 {
+    padding-left: 40px;
+    color: red;
+}
+ 
+#incomeList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ #incomeList li {
+     padding: 10px;
+     margin-bottom: 10px;
+     box-shadow: var(--box-shadow);
+     margin-left: 20px;
+ }
+
+ #expensesList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ #expensesList li {
+     padding: 10px;
+     margin-bottom: 10px;
+     box-shadow: var(--box-shadow);
+     margin-right: 10px;
+ }
+ 
+ .addInput {
+     margin-top: 40px;
+ }
+
+ .addInput form {
+     display: flex;
+     flex-direction: column;
+ }
+
+ #inButton {
+     color: green;
+     text-transform: uppercase;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
+
+ #expButton {
+     color: red;
+     text-transform: uppercase;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
+ 
+ 
+ 
+
