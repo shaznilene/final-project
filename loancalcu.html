@@ -1,1 +1,72 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Loan Calculator </title>
+  <link rel="stylesheet" type="text/css" href="loancalc.css">
+</head>
+<body>
+  <section> Estimate Your Monthly Payment Here! </section>
+    <div class="emi-holder">
+    <div class="calculator card">
+    <h1> Loan Calculator </h1>
+    <form action="">        
+      <div class="block">
+        <h3> Loan Amount
+        <input type="number" name="amount" id="loanAmount" onchange="computeLoan()"
+        </h3>
+      </div>
+      <div class="block">
+        <h3> Interest Rate
+        <input type="number" name="interestRate" id="interestRate" onchange="computeLoan()"
+        </h3>
+      </div>
+      <div class="block">
+        <h3> Months to Pay
+        <input type="number" name="months" id="months" onchange="computeLoan()"
+        </h3>
+      </div>
+      <div>
+        <h3 id="mp"></h3>
+        <span type="number" class="output" id="emi"></span>
+      </div>
+    </form>
+    </div>
+       
+<script>
+  function computeLoan() 
+  {
+    let loanAmount = document.getElementById("loanAmount").value;
+    let interestRate = document.getElementById("interestRate").value;
+    let months = document.getElementById("months").value;
+    
+    let interest = (loanAmount * (interestRate * 0.01) / months;
+    let mp = ((loanAmount / months) * interest)
+    
+    document.querySelector('#mp').innerHTML = `Monthly Payment:` + " ₱" + (mp).toFixed(2);
+  }
+</script>
+</body>
+</html>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
