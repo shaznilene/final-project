@@ -1,6 +1,10 @@
+:root {
+    --box-shadow: 0px 1px 4px 1px rgba(199,199,199,1);
+}
+
 section {
-  font-size: 30px;
-  font-family: Georgia;
+  font-size: 40px;
+  font-family: 'Josefin Sans', sans-serif;
   text-align: center;
   margin: 30px;
   size: 30px;
@@ -10,6 +14,8 @@ body {
   margin: 0;
   box-sizing: border-box;
   box-align: center;
+  background-image: url(loanbg.png);
+  background-size: 100%;
   }
 .emi-holder {
   display: flex;
@@ -22,6 +28,7 @@ body {
   }
 .card {
   background-color: rgba(241, 233, 239, 0.726);
+  box-shadow: var(--box-shadow);
   padding: 30px;
   color: rgb(30, 24, 31);
   }
@@ -33,3 +40,51 @@ input {
   height: 40px;
   color: rgb(20, 19, 19);
   }  
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    padding: 10px 90px;
+    box-sizing: border-box;
+    background: thistle;
+}
+nav .title{
+    padding: 22px 20px;
+    height: 80px;
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+}
+nav ul{
+    list-style: none;
+    float: right;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+nav ul li a {
+    line-height: 80px;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bold;
+
+}
+nav ul li a:hover{
+    background: plum;
+    border-radius: 6px;
+    color: black;
+}
+nav ul li a.active{
+    background: plum;
+    border-radius: 6px;
+}
+ 
+ 
