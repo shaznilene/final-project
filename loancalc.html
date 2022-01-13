@@ -42,7 +42,7 @@
     let interestRate = document.getElementById("interestRate").value;
     let months = document.getElementById("months").value;
     
-    let interest = (loanAmount * (interestRate * 0.01) / months;
+    let interest = (loanAmount * (interestRate * 0.01) / months)
     let mp = ((loanAmount / months) * interest)
     
     document.querySelector('#mp').innerHTML = `Monthly Payment:` + " ₱" + (mp).toFixed(2);
