@@ -5,130 +5,110 @@
 body {
     font-family: 'Josefin Sans', sans-serif;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    margin-left: 70px;
+    background-image: url(finagbg.png);
+    background-size: 90%;
+}
+
+
+
+.balance-Container {
+    margin-top: 100px;
+    box-shadow: var(--box-shadow);
     align-items: center;
-}
-
-.tracker h1 {
     text-align: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: rgba(241, 233, 239, 0.726);
+    position: absolute;
 }
 
-h2 {
+.transaction-Container {
+    margin: 100px;
+    box-sizing: border-box;
+    box-shadow: var(--box-shadow);
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    position: absolute;
+    right: -20px;
+    background-color: rgba(241, 233, 239, 0.726);
+
+}
+
+.dashboard-Container {
+    margin-top: 100px;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    position: absolute;
+    right: 540px;
+    background-color: rgba(241, 233, 239, 0.726);
+    
+
+}
+
+.balance-Container p {
+    font-size: 2.5em;
+    margin-left: 10px;
+}
+
+ nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    padding: 10px 90px;
+    box-sizing: border-box;
+    background: thistle;
+}
+nav .title{
+    padding: 22px 20px;
+    height: 80px;
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
     text-transform: uppercase;
-    text-align: center;
+    color: white;
 }
-
-.budgetDiv #acctBalance {
-    font-size: 1.5em;
-    text-align: center;
-}
-
-.account {
-    display: flex;
-    box-shadow: var(--box-shadow);
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 20px;
-    padding-top: 20px;
-    margin-top: 20px;
-}
-
-.incomeDiv {
-    border-right: 1px solid black;
-    padding-right: 20px;
-}
-
-.incomeDiv h2{
-    color: green;
-}
-
-.expensesDiv{
-    padding-left: 20px;
-}
-
-.expensesDiv h2{
-    color: red;
-}
-
- #acctIncome, #acctExpenses {
-     font-size: 1.3em;
- }
-
- .inExContainer {
-    display: flex;
-    box-shadow: var(--box-shadow);
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 20px;
-    padding-top: 20px;
-    margin-top: 20px;
- }
-
- .incomeContainer {
-    border-right: 1px solid black;
-    padding-right: 20px;
- }
-
- .incomeContainer h3 {
-     padding-left: 50px;
-     color: green;
- }
-
-.expensesContainer {
-    padding-left: 20px;
-}
-
-.expensesContainer h3 {
-    padding-left: 40px;
-    color: red;
-}
- 
-#incomeList {
+nav ul{
     list-style: none;
+    float: right;
     margin: 0;
     padding: 0;
+    display: flex;
 }
- #incomeList li {
-     padding: 10px;
-     margin-bottom: 10px;
-     box-shadow: var(--box-shadow);
-     margin-left: 20px;
- }
+nav ul li a {
+    line-height: 80px;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bold;
 
- #expensesList {
-    list-style: none;
-    margin: 0;
-    padding: 0;
 }
- #expensesList li {
-     padding: 10px;
-     margin-bottom: 10px;
-     box-shadow: var(--box-shadow);
-     margin-right: 10px;
- }
- 
- .addInput {
-     margin-top: 40px;
- }
-
- .addInput form {
-     display: flex;
-     flex-direction: column;
- }
-
- #inButton {
-     color: green;
-     text-transform: uppercase;
-     font-family: Verdana, Geneva, Tahoma, sans-serif;
- }
-
- #expButton {
-     color: red;
-     text-transform: uppercase;
-     font-family: Verdana, Geneva, Tahoma, sans-serif;
- }
- 
+nav ul li a:hover{
+    background: plum;
+    border-radius: 6px;
+    color: black;
+}
+nav ul li a.active{
+    background: plum;
+    border-radius: 6px;
+}
  
  
 
