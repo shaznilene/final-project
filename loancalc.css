@@ -8,8 +8,6 @@ section {
   }
 body {
   margin: 0;
-  backgroung-image: url('bg.png')
-  background-size: cover;
   box-sizing: border-box;
   box-align: center;
   }
