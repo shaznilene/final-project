@@ -6,8 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> Loan Calculator </title>
   <link rel="stylesheet" type="text/css" href="loancalc.css">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="wrap">
+    <nav>
+    <div class="title">BUDGET CHORBA</div>
+    <ul>
+        <li><a class="active" href="final.html"> Home</a></li>
+        <li><a href="loancalcu.html"> Loan Calculator</a></li>
+        <li><a href="hours-battery-life.html"> To Buy list</a></li>
+    </ul>
+    </nav>
+</div>
+  
   <section> Estimate Your Monthly Payment Here! </section>
     <div class="emi-holder">
     <div class="calculator card">
@@ -15,17 +27,17 @@
     <form action="">        
       <div class="block">
         <h3> Loan Amount
-        <input type="number" name="amount" id="loanAmount" onchange="computeLoan()"
+        <input type="number" name="amount" id="loanAmount" onchange="computeLoan()">
         </h3>
       </div>
       <div class="block">
         <h3> Interest Rate
-        <input type="number" name="interestRate" id="interestRate" onchange="computeLoan()"
+        <input type="number" name="interestRate" id="interestRate" onchange="computeLoan()">
         </h3>
       </div>
       <div class="block">
         <h3> Months to Pay
-        <input type="number" name="months" id="months" onchange="computeLoan()"
+        <input type="number" name="months" id="months" onchange="computeLoan()">
         </h3>
       </div>
       <div>
