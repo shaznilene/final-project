@@ -9,75 +9,123 @@
     <link rel="stylesheet" href="final.css">
 </head>
 <body>
-    <div class="tracker">
-        <h1>BUDGET TRACKER</h1>
+    <div class="wrap">
+        <nav>
+        <div class="title">BUDGET CHORBA</div>
+        <ul>
+            <li><a class="active" href="final.html"> Home</a></li>
+            <li><a href="loancalcu.html"> Loan Calculator</a></li>
+            <li><a href="hours-battery-life.html"> To Buy list</a></li>
+        </ul>
+        </nav>
+    </div>
 
-        <div class="budgetDiv">
-            <h2>BALANCE:</h2>
-            <div id="acctBalance">₱000</div>
-        </div>
+    <div class="balance-Container">
+        <h1>BALANCE</h1>
+        <p class="results"></p>
+        <input type="text" placeholder="enter balance" class="inputBalance"> 
+        <button class="addAmount" type="submit">ADD</button>
+    </div>
 
-        <div class="account">
-            <div class="incomeDiv">
-                <h2>INCOME</h2>
-                <div id="acctIncome">₱000</div>
-            </div>
-            <div class="expensesDiv">
-                <h2>Expenses</h2>
-                <div id="acctExpenses">₱000</div>
-            </div>
-        </div>
-        <h2>DASHBOARD:</h2>
-    <div class="inExContainer">
-        <div class="incomeContainer">
-            <h3>Income</h3>
-            <ul id="incomeList">
-                <li>
-                    Commission
-                    <div>
-                        <span class="incomeValue">₱000</span>
-                        <button>Delete</button>
-                    </div>
-                </li>
-                <li>
-                    Salary
-                    <div>
-                        <span class="incomeBalue">₱000</span>
-                        <button>Delete</button>
-                    </div> 
-                </li>
-            </ul>
-        </div>
-        <div class="expensesContainer">
-            <h3>Expenses</h3>
-            <ul id="expensesList">
-                <li>
-                    Buy grocery 
-                    <div>
-                        <span class="expenseValue">₱000</span>
-                        <button>Delete</button>
-                    </div>
-                </li>
-                <li>
-                    Buy school supplies
-                    <div>
-                        <span class="expenseValue">₱000</span>
-                        <button>Delete</button>
-                    </div> 
-                </li>
-            </ul>
-        </div>
+    <div class="dashboard-Container">
+        <h1>DASHBOARD</h1>
+        <h3>Income history:</h3>
+        <ul class="incomeTransactions"></ul>
+        <h3>Expense history:</h3>
+        <ul class="transactions"></ul>
     </div>
     
-        <div class="addInput">
-            <h2>Add transaction</h2>
-            <form>
-                <label for="type">type:</label> <input id="inputType" type="text">
-                <label for="amount">amount:</label> <input id="inputValue" type="text"><br>
-                <button id="inButton">Input Income</button><br>
-                <button id="expButton">Input Expense</button>
-            </form>
-        </div>
+    <div class="transaction-Container">
+        <h1>TRANSACTIONS</h1>
+        <h3>Add income</h2>
+        Name:
+        <input type="text" placeholder="enter name" class="incomeType"><br><br>
+        Amount:
+        <input type="number" placeholder="enter value" class="incomeValue"><br><br>
+        <button class="addIncome">Income</button><br><br>
+
+        <h3>Add expenses</h3>
+        Name:
+        <input type="text" placeholder="enter name" class="expenseType"><br><br>
+        Amount:
+        <input type="number" placeholder="enter value" class="expenseValue"><br><br>
+        <button class="addExpenses">Expense</button>
     </div>
+
+
+    <script type="text/javascript">
+        const balance = document.querySelector('.inputBalance')
+        const bttn = document.querySelector('.addAmount')
+        const result = document.querySelector('.results')
+        const inTrans = document.querySelector('.incomeTransactions')
+        const trans = document.querySelector('.transactions')
+        let balanceAmt;
+        const enterInType = document.querySelector('.incomeType')
+        const enterInValue = document.querySelector('.incomeValue')
+        const enterExType = document.querySelector('.expenseType')
+        const enterExValue = document.querySelector('.expenseValue')
+        const income = document.querySelector('.addIncome')
+        const expenses = document.querySelector('.addExpenses')
+
+        bttn.addEventListener('click', addBudget)
+        bttn.addEventListener('click',()=>{
+            balance.value = " ";
+        })
+        income.addEventListener('click', addIncomeValue)
+        income.addEventListener('click',()=>{
+            enterInType.value = " ";
+        })
+        income.addEventListener('click',()=>{
+            enterInValue.value = " ";
+        })
+        expenses.addEventListener('click', addExpensesValue)
+        expenses.addEventListener('click',()=>{
+            enterExType.value = " ";
+        })
+        expenses.addEventListener('click',()=>{
+            enterExValue.value = " ";
+        })
+
+        function addBudget(){
+            const inputNumber = Number(balance.value)
+            if (inputNumber > 0) {
+                balanceAmt = inputNumber
+                result.textContent = `₱${balanceAmt}`
+                balance.value = ""
+            }
+            else {
+                result.textContent = `Please enter a number`
+            }
+        }
+
+        function addIncomeValue(){
+            const inputAmount = Number(enterInValue.value)
+            const inputInType = enterInType.value 
+            balanceAmt += Number(inputAmount)
+            result.textContent = `₱${balanceAmt}`
+            const inTransaction = document.createElement('li')
+            inTransaction.textContent = inputInType + " " + "₱" + inputAmount
+            inTrans.appendChild(inTransaction)
+            
+        }
+
+        function addExpensesValue() {
+            const inputExpenses = Number(enterExValue.value)
+            const inputType = enterExType.value 
+            if (balanceAmt >= Number(inputExpenses)){
+                balanceAmt -= Number(inputExpenses)
+                result.textContent = `₱${balanceAmt}`
+                const exTransation = document.createElement('li')
+                exTransation.textContent = inputType + " " + "₱" + inputExpenses
+                trans.appendChild(exTransation)
+            }
+            else {
+                result.textContent = "Insufficient funds"
+            }
+        }
+    </script>
+
+
+   
 </body>
 </html>
