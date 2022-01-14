@@ -19,46 +19,39 @@
     </ul>
     </nav>
 </div>
-  
-  <section> Estimate Your Monthly Payment Here! </section>
+<section>Estimate Your Monthly Payment Here!</section>
     <div class="emi-holder">
-    <div class="calculator card">
-    <h1> Loan Calculator </h1>
-    <form action="">        
-      <div class="block">
-        <h3> Loan Amount
-        <input type="number" name="amount" id="loanAmount" onchange="computeLoan()">
-        </h3>
-      </div>
-      <div class="block">
-        <h3> Interest Rate
-        <input type="number" name="interestRate" id="interestRate" onchange="computeLoan()">
-        </h3>
-      </div>
-      <div class="block">
-        <h3> Months to Pay
-        <input type="number" name="months" id="months" onchange="computeLoan()">
-        </h3>
-      </div>
-      <div>
-        <h3 id="mp"></h3>
-        <span type="number" class="output" id="emi"></span>
-      </div>
-    </form>
+    <div class="calculator card">  
+            <div>
+                <h3> Loan Amount</h3>
+                <input type="number" id="loanAmount" onchange="computeLoan()">
+            </div>
+            <div>
+                <h3> Interest Rate </h3>
+                <input type="number" id="interestRate" onchange="computeLoan()">
+            </div>
+            <div>
+                <h3> Months to Pay </h3>
+                <input type="number" id="months" onchange="computeLoan()">
+            </div>
+
+            <p><button class="btn" onclick="computeLoan()">Calculate!</button></p>
+            <p id="mpResult" style="font-weight: bold;"></p>
+    </div>
     </div>
        
 <script>
-  function computeLoan() 
-  {
-    let loanAmount = document.getElementById("loanAmount").value;
-    let interestRate = document.getElementById("interestRate").value;
-    let months = document.getElementById("months").value;
+    function computeLoan() 
+    {
+        let loanAmount = document.getElementById("loanAmount").value;
+        let interestRate = document.getElementById("interestRate").value;
+        let months = document.getElementById("months").value;
     
-    let interest = (loanAmount * (interestRate * 0.01) / months)
-    let mp = ((loanAmount / months) * interest)
+        let interest = (loanAmount * (interestRate * 0.01) / months);
+        let mp = ((loanAmount / months) + interest).toFixed(2);
     
-    document.querySelector('#mp').innerHTML = `Monthly Payment:` + " ₱" + (mp).toFixed(2);
-  }
+        document.getElementById("mpResult").innerHTML = "Monthly Payment: ₱" + mp
+    }
 </script>
 </body>
 </html>  
