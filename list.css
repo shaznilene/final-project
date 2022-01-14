@@ -7,7 +7,8 @@
 } 
 body {
     height: 100vh;
-    background: #838bb2;
+    background-image: url(loanbg.png);
+    background-size: 100%;
 } 
 .container {
     width: 40%;
@@ -97,3 +98,52 @@ body {
     text-decoration: line-through;
     color: #ce8467;
 }
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    padding: 10px 90px;
+    box-sizing: border-box;
+    background: thistle;
+}
+nav .title{
+    padding: 22px 20px;
+    height: 80px;
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+}
+nav ul{
+    list-style: none;
+    float: right;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+nav ul li a {
+    line-height: 80px;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bold;
+
+}
+nav ul li a:hover{
+    background: plum;
+    border-radius: 6px;
+    color: black;
+}
+nav ul li a.active{
+    background: plum;
+    border-radius: 6px;
+}
+ 
+ 
+
